@@ -7,11 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Cup</title>
 </head>
+<style>
+    .item{
+        height: 500px;
+        border: red 15px solid;
+        border-radius: 5%;
+    }
+</style>
 
 <body>
     <h1>Hello! This is World Cup!</h1>
-    <img src="../../static/images/download.jpg" alt="OH NO!">
-    <img src="{% static 'images/download.jpg' %}" alt="OH no!">
+    <img class="item" src="{% static 'images/download.jpg' %}" alt="OH no!">
 
 </body>
 
