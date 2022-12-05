@@ -1,26 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
 {% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>World Cup</title>
-</head>
-<style>
-    .item{
-        height: 500px;
-        border: red 15px solid;
-        border-radius: 5%;
-    }
-</style>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Django</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
 
-<body>
-    <h1>Hello! This is World Cup!</h1>
-    <img class="item" src="{% static 'images/cup.jpeg' %}" alt="OH no!">
-
-</body>
-
+    <body>
+        <h1>Hello Welcome to Django Level Two</h1>
+        <h2>Here are your access record:</h2>
+        <div class="djangotwo">
+            {% if access_records %}
+            <table>
+                <thead>
+                    <th>Site Name</th>
+                    <th>Date Accessed</th>
+                </thead>
+                {% for acc in access_records %}
+                <tr>
+                    <td>{{ acc.name }}</td>
+                    <td>{{ acc.date }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+            <p>NO ACCESSS RECORD FOUND</p>
+            {% endif %}
+        </div>
+    </body>
 </html>

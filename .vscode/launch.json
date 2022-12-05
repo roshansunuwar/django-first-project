@@ -7,7 +7,7 @@
         {
             "name": "Django: First Project",
             "type": "python",
-            "python": "${workspaceFolder}/myenv/bin/python",
+            "python": "${workspaceFolder}/virtual/bin/python",
             "request": "launch",
             "program": "${workspaceFolder}/manage.py",
             "args": [
